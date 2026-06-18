@@ -1,161 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adithya Binesh - Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adithya Binesh | Portfolio</title>
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(-45deg, #f8fafc, #ffe4e6, #fef3c7, #e0f2fe);
+      background-size: 400% 400%;
+      animation: gradientMove 10s ease infinite;
+    }
 
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-    </style>
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+  </style>
 </head>
 
-<body class="bg-slate-50 text-slate-900">
+<body class="text-gray-800">
 
-<!-- HEADER -->
-<header class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
-    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-        <h1 class="font-bold text-xl">Adithya Binesh</h1>
-
-        <ul class="hidden md:flex gap-8 text-gray-600">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-</header>
-
-<main class="pt-24">
-
-<!-- HERO -->
-<section id="home" class="text-center py-20">
-    <h1 class="text-5xl font-bold">
-        AI Builder & Full-Stack Developer
+  <!-- HERO -->
+  <section class="h-screen flex flex-col justify-center items-center text-center px-4">
+    <h1 class="text-5xl font-bold mb-4">
+      <span id="typing"></span>
     </h1>
+    <p class="text-lg mb-6">Aspiring Full Stack Developer 🚀</p>
 
-    <p class="text-gray-600 mt-4 text-lg">
-        I build AI-powered tools for learning and productivity
-    </p>
+    <a href="#projects" 
+       class="bg-orange-500 text-white px-6 py-3 rounded-full 
+       hover:scale-110 hover:bg-orange-600 
+       active:scale-95 transition-all duration-300">
+       View My Work
+    </a>
+  </section>
 
-    <div class="mt-6 flex justify-center gap-4">
-        <a href="#projects" class="bg-orange-500 text-white px-6 py-3 rounded-full">
-            View Projects
-        </a>
-        <a href="#contact" class="border px-6 py-3 rounded-full">
-            Contact Me
-        </a>
-    </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="container mx-auto px-6 py-16">
+  <!-- ABOUT -->
+  <section id="about" class="p-10 text-center" data-aos="fade-right">
     <h2 class="text-3xl font-bold mb-4">About Me</h2>
-
-    <p class="text-gray-600 leading-relaxed max-w-3xl">
-        I am a passionate developer focused on building AI-powered educational tools.
-        I enjoy creating real-world projects like FocusAI and Papryx AI that help students learn better and faster.
+    <p>
+      I build AI-powered tools like FocusAI (study assistant) and Papryx AI 
+      (question paper generator). Passionate about web development and creating real-world solutions.
     </p>
-</section>
+  </section>
 
-<!-- PROJECTS -->
-<section id="projects" class="bg-white py-16">
-    <div class="container mx-auto px-6">
+  <!-- PROJECTS -->
+  <section id="projects" class="p-10" data-aos="fade-up">
+    <h2 class="text-3xl font-bold text-center mb-8">Projects</h2>
 
-        <h2 class="text-3xl font-bold text-center mb-10">Projects</h2>
+    <div class="grid md:grid-cols-2 gap-6">
 
-        <div class="grid md:grid-cols-2 gap-10">
+      <!-- FocusAI -->
+      <div class="backdrop-blur-lg bg-white/30 border border-white/20 
+      rounded-xl p-6 shadow-lg 
+      hover:scale-105 hover:shadow-2xl transition-all duration-300">
 
-            <!-- FocusAI -->
-            <div class="shadow-lg rounded-xl overflow-hidden bg-slate-50 hover:scale-105 transition">
-                <img src="https://placehold.co/600x400?text=FocusAI" class="w-full">
+        <h3 class="text-xl font-bold mb-2">FocusAI</h3>
+        <p class="mb-4">Mini ChatGPT for studying and productivity.</p>
 
-                <div class="p-6">
-                    <h3 class="text-2xl font-bold">FocusAI</h3>
-                    <p class="text-gray-600 mt-2">
-                        AI-powered study assistant that helps students learn and revise efficiently.
-                    </p>
-
-                    <div class="flex gap-3 mt-4">
-                        <a href="https://focusai-study-suite.vercel.app/" target="_blank"
-                           class="text-orange-500 font-semibold">
-                            🔗 Live Demo
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Papryx AI -->
-            <div class="shadow-lg rounded-xl overflow-hidden bg-slate-50 hover:scale-105 transition">
-                <img src="https://placehold.co/600x400?text=Papryx+AI" class="w-full">
-
-                <div class="p-6">
-                    <h3 class="text-2xl font-bold">Papryx AI</h3>
-                    <p class="text-gray-600 mt-2">
-                        AI question paper generator that creates customized exams instantly.
-                    </p>
-
-                    <div class="flex gap-3 mt-4">
-                        <a href="https://papryx-ai.lovable.app/" target="_blank"
-                           class="text-orange-500 font-semibold">
-                            🔗 Live Demo
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="container mx-auto px-6 py-16">
-    <h2 class="text-3xl font-bold mb-6">Contact Me</h2>
-
-    <p class="text-gray-600 mb-6">
-        Want to collaborate or talk? Reach out below.
-    </p>
-
-    <div class="flex flex-col gap-4 text-lg">
-
-        <!-- Email -->
-        <a href="mailto:adithyabinesh07@gmail.com" class="flex items-center gap-3 hover:text-orange-500 transition">
-            <i class="fas fa-envelope text-2xl"></i>
-            <span>adithyabinesh07@gmail.com</span>
+        <a href="#" class="text-orange-600 font-semibold hover:underline">
+          View Project →
         </a>
+      </div>
 
-        <!-- GitHub -->
-        <a href="https://github.com/Adithya-Binesh-007" target="_blank" class="flex items-center gap-3 hover:text-orange-500 transition">
-            <i class="fab fa-github text-2xl"></i>
-            <span>GitHub Profile</span>
-        </a>
+      <!-- Papryx AI -->
+      <div class="backdrop-blur-lg bg-white/30 border border-white/20 
+      rounded-xl p-6 shadow-lg 
+      hover:scale-105 hover:shadow-2xl transition-all duration-300">
 
-        <!-- LinkedIn -->
-        <a href="https://www.linkedin.com/in/adithya-binesh-631270388" target="_blank" class="flex items-center gap-3 hover:text-orange-500 transition">
-            <i class="fab fa-linkedin text-2xl"></i>
-            <span>LinkedIn Profile</span>
+        <h3 class="text-xl font-bold mb-2">Papryx AI</h3>
+        <p class="mb-4">AI-powered question paper generator.</p>
+
+        <a href="https://papryx-ai.lovable.app/" target="_blank" 
+           class="text-orange-600 font-semibold hover:underline">
+          View Project →
         </a>
+      </div>
 
     </div>
-</section>
+  </section>
 
-</main>
+  <!-- CONTACT -->
+  <section id="contact" class="p-10 text-center" data-aos="zoom-in">
+    <h2 class="text-3xl font-bold mb-4">Contact</h2>
 
-<!-- FOOTER -->
-<footer class="text-center py-6 text-gray-500">
-    © 2026 Adithya Binesh. Built with passion.
-</footer>
+    <p>Email: adithyabinesh07@gmail.com</p>
+    <p>
+      LinkedIn: 
+      <a href="https://www.linkedin.com/in/adithya-binesh-631270388" 
+         class="text-orange-600 hover:underline">
+         Visit Profile
+      </a>
+    </p>
+  </section>
+
+  <!-- AOS SCRIPT -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+
+  <!-- TYPING EFFECT -->
+  <script>
+    const text = "I build AI tools like FocusAI & Papryx AI";
+    let i = 0;
+
+    function type() {
+      if (i < text.length) {
+        document.getElementById("typing").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(type, 50);
+      }
+    }
+
+    type();
+  </script>
+
+  <!-- CURSOR GLOW -->
+  <script>
+    const cursor = document.createElement("div");
+    cursor.style.width = "20px";
+    cursor.style.height = "20px";
+    cursor.style.borderRadius = "50%";
+    cursor.style.background = "orange";
+    cursor.style.position = "fixed";
+    cursor.style.pointerEvents = "none";
+    cursor.style.transform = "translate(-50%, -50%)";
+    cursor.style.transition = "0.1s";
+    document.body.appendChild(cursor);
+
+    document.addEventListener("mousemove", e => {
+      cursor.style.left = e.clientX + "px";
+      cursor.style.top = e.clientY + "px";
+    });
+  </script>
 
 </body>
 </html>
